@@ -97,7 +97,7 @@ header ul li a.active {
     margin: 20px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -105,108 +105,41 @@ header ul li a.active {
     backdrop-filter: blur(15px);
 }
 
-.container .card .imgBx {
+.container .card .imagem .imgBx {
     position: relative;
-    width: 100%;
-    height: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     flex-direction: column;
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover .imgBx {
-    transform: translateY(-100px);
-}
-
-.container .card:hover .titulo h4 {
-    transform: translateY(-100px);
-}
-
-.container .card .imgBx img {
-    max-width: 50%;
-    margin: 0 0 20px;
-    transition: 0.5s ease-in-out;
-}
-
-.container .card .titulo h4 {
+.container .card .texto  h4 {
     color: white;
     font-weight: 600;
     text-shadow: 0.1em 0.1em 0.2em black;
     transition: 0.5s ease-in-out;
 }
 
-.container .card .content {
-    position: absolute;
-    padding: 10px;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 0.5s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.container .card .content h3 {
+.container .card .texto p {
     font-weight: 300;
     font-size: 1em;
     text-align: center;
 }
 
-.container .card:hover .content {
-    opacity: 1;
-    visibility: visible;
-}
-
-.container .card .content a {
+.container .card a {
     position:relative;
     top: 10px;
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 20px;
     background: #fff;
     border-radius: 40px;
     font-weight: 600;
     letter-spacing: 1px;
     color: rgba(255, 115, 0);
     text-decoration: none;
-}
-
-.sci {
-    position: absolute;
-    right: -25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.sci li {
-    list-style: none;
-}
-
-.sci li a {
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    background: #ffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin: 5px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sci li a img {
-    transform: scale(0.6);
-    transition: 0.5s;
-}
-
-.sci li:hover a img {
-    transform: scale(0.6) rotate(360deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .copyrightText {
@@ -215,12 +148,6 @@ header ul li a.active {
     left: 50px;
     color: var(--cor-texto);
     font-size: 0.8em;
-}
-
-@media (max-width: 1400px) {
-    .container .card .titulo h4 {
-        font-size: 0.7em;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -234,75 +161,10 @@ header ul li a.active {
     section {
         padding: 50px 10px 10px;
     }
-
+    
     .container {
         flex-direction: column;
         height: auto;
         padding: 20px;
-    }
-
-    .container .card .titulo h4 {
-        font-size: 1em;
-    }
-
-    .container .content {
-        transform: translateX(0px);
-        max-width: 100%;
-        padding: 30px;
-        margin-top: 40px;
-    }
-
-    header {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        top: -60px;
-        padding: 20px;
-        right: 0;
-        left: 0;
-    }
-
-    header ul {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    header ul li {
-        margin: 2px;
-    }
-
-    header ul li a {
-        display: inline-block;
-    }
-
-    .imgBx {
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
-
-    .sci {
-        position: relative;
-        flex-direction: row;
-        left: 0;
-    }
-
-    .sci li a {
-        margin: 0 10px;
-    }
-
-    .copyrightText {
-        position: relative;
-        bottom: initial;
-        left: inherit;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .content h2 {
-        font-size: 1.2em;
     }
 }
